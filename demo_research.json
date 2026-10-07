@@ -1,0 +1,505 @@
+{
+  "schema_version": "1.0",
+  "researched_at": "2026-10-04T18:00:00Z",
+  "data_scope": "synthetic_demo",
+  "organizations": [
+    {
+      "name": "Demo Seed Partners",
+      "canonical_domain": "demo-seed.example",
+      "aliases": [],
+      "organization_type": "venture_capital",
+      "scope_status": "in_scope",
+      "scope_reason": "Synthetic U.S. funding organization for importer testing.",
+      "funding_status": {
+        "status": "actively_investing",
+        "source_ids": [
+          "S1"
+        ],
+        "note": "Synthetic current investing status, not real activity."
+      },
+      "criteria": {
+        "stage": {
+          "findings": [
+            {
+              "statement": "Synthetic investment focus: pre-seed financing.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            },
+            {
+              "statement": "Synthetic preference: a working prototype or later product progress.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "sector": {
+          "findings": [
+            {
+              "statement": "Synthetic investment focus: AI-enabled B2B software.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "geography": {
+          "findings": [
+            {
+              "statement": "Synthetic mandate: invests in U.S. operating ventures.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "amount": {
+          "findings": [
+            {
+              "statement": "Synthetic published first check: $150,000.",
+              "evidence_status": "verified",
+              "rule_type": "typical_profile",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "traction": {
+          "findings": [
+            {
+              "statement": "Synthetic policy: no paying-customer minimum at pre-seed; zero customers eligible.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "restrictions": {
+          "findings": [
+            {
+              "statement": "Synthetic funding requires founders willing to accept equity investment.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            },
+            {
+              "statement": "Synthetic preference: supports founders building in their current location.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            },
+            {
+              "statement": "Synthetic requirement: all founders work full-time on the venture.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        }
+      },
+      "check_size": {
+        "currency": "USD",
+        "basis": "first_check",
+        "minimum_usd": null,
+        "maximum_usd": null,
+        "typical_usd": 150000,
+        "source_ids": [
+          "S1"
+        ],
+        "note": "Synthetic individual check for validation testing; no commitment."
+      },
+      "investor_role": {
+        "role": "unknown",
+        "source_ids": [],
+        "note": "Round role not verified."
+      },
+      "contacts": [],
+      "approach_routes": [
+        {
+          "route_id": "R1",
+          "route_type": "contact_page",
+          "value": "https://demo-seed.example/contact",
+          "label": "Synthetic route",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Demonstration placeholder; do not contact."
+        }
+      ],
+      "portfolio_conflicts": {
+        "review_status": "reviewed",
+        "items": [],
+        "note": "Synthetic portfolio reviewed for this demonstration; no overlap in the scenario."
+      },
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Synthetic investment criteria",
+          "url": "https://demo-seed.example/criteria",
+          "publisher": "Demo Seed Partners",
+          "source_type": "official",
+          "checked_on": "2026-10-04",
+          "published_on": null,
+          "supports": [
+            "Synthetic investment focus: pre-seed financing.",
+            "Synthetic investment focus: AI-enabled B2B software.",
+            "Synthetic mandate: invests in U.S. operating ventures.",
+            "Synthetic funding requires founders willing to accept equity investment.",
+            "Synthetic preference: supports founders building in their current location.",
+            "Synthetic requirement: all founders work full-time on the venture.",
+            "Synthetic policy: no paying-customer minimum at pre-seed; zero customers eligible.",
+            "Synthetic preference: a working prototype or later product progress.",
+            "Synthetic published first check: $150,000.",
+            "Synthetic active investing status and scenario portfolio review.",
+            "Synthetic organizational contact-page route."
+          ],
+          "redistribution_status": "permitted",
+          "rights_note": "Original synthetic demonstration content authored for this project."
+        }
+      ],
+      "open_questions": [
+        "Relevant individual contact and round role remain unknown."
+      ],
+      "research_limitations": [
+        "Entire profile and source contents are synthetic. Reserved .example URLs are demonstration placeholders, not live evidence. No real contacts or investing commitments."
+      ]
+    },
+    {
+      "name": "Demo Valley Angels",
+      "canonical_domain": "demo-angels.example",
+      "aliases": [],
+      "organization_type": "angel_group",
+      "scope_status": "in_scope",
+      "scope_reason": "Synthetic U.S. funding organization for importer testing.",
+      "funding_status": {
+        "status": "actively_investing",
+        "source_ids": [
+          "S1"
+        ],
+        "note": "Synthetic current investing status, not real activity."
+      },
+      "criteria": {
+        "stage": {
+          "findings": [
+            {
+              "statement": "Synthetic investment focus: pre-seed financing.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "sector": {
+          "findings": [
+            {
+              "statement": "Synthetic investment focus: AI-enabled B2B software.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "geography": {
+          "findings": [
+            {
+              "statement": "Synthetic mandate: invests in U.S. operating ventures.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "amount": {
+          "findings": [
+            {
+              "statement": "Synthetic published first check: $150,000.",
+              "evidence_status": "verified",
+              "rule_type": "typical_profile",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "traction": {
+          "findings": [
+            {
+              "statement": "Synthetic preference: at least five paying customers.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "restrictions": {
+          "findings": [
+            {
+              "statement": "Synthetic funding requires founders willing to accept equity investment.",
+              "evidence_status": "verified",
+              "rule_type": "hard_requirement",
+              "source_ids": [
+                "S1"
+              ]
+            },
+            {
+              "statement": "Synthetic preference: supports founders building in their current location.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        }
+      },
+      "check_size": {
+        "currency": "USD",
+        "basis": "first_check",
+        "minimum_usd": null,
+        "maximum_usd": null,
+        "typical_usd": 150000,
+        "source_ids": [
+          "S1"
+        ],
+        "note": "Synthetic individual check for validation testing; no commitment."
+      },
+      "investor_role": {
+        "role": "unknown",
+        "source_ids": [],
+        "note": "Round role not verified."
+      },
+      "contacts": [],
+      "approach_routes": [
+        {
+          "route_id": "R1",
+          "route_type": "contact_page",
+          "value": "https://demo-angels.example/contact",
+          "label": "Synthetic route",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Demonstration placeholder; do not contact."
+        }
+      ],
+      "portfolio_conflicts": {
+        "review_status": "reviewed",
+        "items": [],
+        "note": "Synthetic portfolio reviewed for this demonstration; no overlap in the scenario."
+      },
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Synthetic investment criteria",
+          "url": "https://demo-angels.example/criteria",
+          "publisher": "Demo Valley Angels",
+          "source_type": "official",
+          "checked_on": "2026-10-04",
+          "published_on": null,
+          "supports": [
+            "Synthetic investment focus: pre-seed financing.",
+            "Synthetic investment focus: AI-enabled B2B software.",
+            "Synthetic mandate: invests in U.S. operating ventures.",
+            "Synthetic funding requires founders willing to accept equity investment.",
+            "Synthetic preference: supports founders building in their current location.",
+            "Synthetic preference: at least five paying customers.",
+            "Synthetic published first check: $150,000.",
+            "Synthetic active investing status and scenario portfolio review.",
+            "Synthetic organizational contact-page route."
+          ],
+          "redistribution_status": "permitted",
+          "rights_note": "Original synthetic demonstration content authored for this project."
+        }
+      ],
+      "open_questions": [
+        "Relevant individual contact and round role remain unknown."
+      ],
+      "research_limitations": [
+        "Entire profile and source contents are synthetic. Reserved .example URLs are demonstration placeholders, not live evidence. No real contacts or investing commitments."
+      ]
+    },
+    {
+      "name": "Demo Growth Capital",
+      "canonical_domain": "demo-growth.example",
+      "aliases": [],
+      "organization_type": "growth_equity",
+      "scope_status": "out_of_scope",
+      "scope_reason": "Synthetic growth-equity control; outside angel/VC recommendations.",
+      "funding_status": {
+        "status": "unknown",
+        "source_ids": [],
+        "note": "Current investing activity not verified."
+      },
+      "criteria": {
+        "stage": {
+          "findings": [
+            {
+              "statement": "Synthetic profile: growth stage.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "sector": {
+          "findings": [
+            {
+              "statement": "Synthetic preference: AI-enabled B2B software.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "geography": {
+          "findings": [
+            {
+              "statement": "Synthetic mandate: invests in U.S. companies.",
+              "evidence_status": "verified",
+              "rule_type": "preference",
+              "source_ids": [
+                "S1"
+              ]
+            }
+          ],
+          "unknowns": [],
+          "conflicts": []
+        },
+        "amount": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "traction": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "restrictions": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        }
+      },
+      "check_size": {
+        "currency": "USD",
+        "basis": "first_check",
+        "minimum_usd": null,
+        "maximum_usd": null,
+        "typical_usd": 15000000,
+        "source_ids": [
+          "S1"
+        ],
+        "note": "Synthetic individual check for validation testing; no commitment."
+      },
+      "investor_role": {
+        "role": "unknown",
+        "source_ids": [],
+        "note": "Round role not verified."
+      },
+      "contacts": [],
+      "approach_routes": [
+        {
+          "route_id": "R1",
+          "route_type": "contact_page",
+          "value": "https://demo-growth.example/contact",
+          "label": "Synthetic route",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Demonstration placeholder; do not contact."
+        }
+      ],
+      "portfolio_conflicts": {
+        "review_status": "not_reviewed",
+        "items": [],
+        "note": "No portfolio review performed."
+      },
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Synthetic investment criteria",
+          "url": "https://demo-growth.example/criteria",
+          "publisher": "Demo Growth Capital",
+          "source_type": "official",
+          "checked_on": "2026-10-04",
+          "published_on": null,
+          "supports": [
+            "Synthetic U.S. mandate, investment stage and check size."
+          ],
+          "redistribution_status": "permitted",
+          "rights_note": "Original synthetic demonstration content authored for this project."
+        }
+      ],
+      "open_questions": [
+        "Verify organization identity, scope and criteria."
+      ],
+      "research_limitations": [
+        "Entire profile and source contents are synthetic. Reserved .example URLs are demonstration placeholders, not live evidence. No real contacts or investing commitments."
+      ]
+    }
+  ]
+}

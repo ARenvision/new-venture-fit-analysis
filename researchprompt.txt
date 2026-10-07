@@ -1,0 +1,153 @@
+NEW VENTURE FIT ANALYSIS — INVESTOR RESEARCH PROMPT
+Schema 1.0
+
+INPUT
+Funding organization name(s): [PASTE ONE TO FIVE NAMES]
+Optional official domain(s): [ONLY IF KNOWN]
+Optional confirmed venture profile: [PASTE ONLY IF TESTING SPECIFIC PORTFOLIO OVERLAP]
+
+ROLE AND TASK
+Act as a funding research analyst. Research each named organization for a local tool serving U.S. AI ventures seeking angel or venture-capital funding. Produce reusable investor evidence, not a venture recommendation. Do not contact anyone, submit pitch forms, send email or write to a database.
+
+Use live sources if browsing is available. If it is not available, state the limitation in the JSON; do not represent remembered or invented facts as verified. Do not invent firms to reach a target count. No LinkedIn sourcing.
+
+RESEARCH ORDER
+1. Resolve the funding organization using its official website and identity. Separate a VC fund, angel group, accelerator and growth-equity firm. Do not confuse fund size with check size or current follow-on portfolio rounds with initial investment stage.
+2. Read official investment/FAQ/focus pages, dated announcements, portfolio and team/contact pages. Prefer direct firm criteria. Independent reporting can supplement, labeled independent_secondary. A first-party job description can support a dated typical profile, but is weaker than a current investment criteria page; note the limitation.
+3. Capture the six factors: stage, sector, geography, funding amount, traction and restrictions. Separate hard requirements, preferences, typical profiles, portfolio examples and analyst inferences. U.S. office address is not evidence of a U.S. investment mandate. An AI portfolio company is relevance evidence, not proof that all AI ventures qualify.
+4. Determine published first-check/range figures in USD, round role, and current investing status when evidenced. Do not infer active investing solely from a live website or old deal. Do not convert another currency without a sourced conversion; leave USD fields null and explain.
+5. Identify relevant investment professionals or angel-group application/screening staff. Name, position and relevance need official support. Decision authority remains not_verified unless explicitly stated. Capture only published business email, official pitch/contact page or firm switchboard; no personal phone, guessed email or guessed submission URL. If no person is verified, contacts is [] and use a verified organizational approach route if available.
+6. If a venture profile is provided, examine relevant official portfolio entries for potential overlap. Similarity alone is not a confirmed conflict. With no venture profile, label portfolio_conflicts not_reviewed; do not claim conflict-free status.
+7. Preserve unknowns, conflicting statements, source dates and access limitations. Do not pad the record with generic advice.
+
+EVIDENCE RULES
+- Every finding has statement, evidence_status, rule_type and source_ids.
+- Use verified only for a factual statement directly supported by the sources. Use inferred for a conclusion derived from evidence, and explain the reasoning in the statement.
+- Each cited source_id must resolve to a source in that SAME organization. Use S1, S2, etc. IDs are local to each profile, not database identities.
+- Each source includes title, full working URL, publisher, source_type, actual checked_on date, published_on date or null, the claims it supports, redistribution_status and rights_note.
+- Use short factual paraphrases. Do not reproduce source articles or contact directories. Public accessibility does not establish redistribution permission; default rights to unknown unless explicitly verified. Source use in a public dataset requires separate rights review.
+- Use the actual time of this research for researched_at. Never predate it. Unknown dates are null except checked_on, which is the actual access date.
+- Website/domain display field omits protocol; source URLs retain http/https for validation and clickable citations. canonical_domain is a verified lower-case official host with no path; use null if unresolved.
+- Absence of a published threshold is unknown, not proof that no threshold exists. Missing revenue is not zero. No response is not a research-based rejection or poor fit.
+
+SCOPE RULES
+Mark in_scope only with evidence of U.S. investing relevance and angel-group/VC identity. Mark out_of_scope with the supported reason (for example growth equity or accelerator-only). Use unclear for unresolved identity/mandate. Out-of-scope records can serve as test controls and never enter recommendations by default.
+
+CHECK SIZE RULES
+minimum_usd, maximum_usd and typical_usd are individual investment amounts, not target round amounts, total AUM or fund size. Published one-sided ranges leave the other bound null: “$2M+” is not a fixed $2M maximum. A published fixed first check may set typical_usd while bounds remain null. Cite source_ids. Do not fabricate a lead role from a large check. Known size/role require citations; all unknown sizes are null.
+
+CONTACT AND ROUTE RULES
+Use R1, R2, etc. within each organization's approach_routes. Contact route_ids must resolve within that profile. Do not assign a firm-wide email or phone to a specific person without support; keep it as an organizational route. An unverified personal email is omitted, not guessed. Open questions identify unresolved contacts.
+
+OUTPUT
+JSON only. Follow research.schema.json exactly; no code fences, commentary, markdown tables or extra keys. One envelope with one to five organizations. Do not generate internal database IDs, SHA hashes, fit classifications, success probabilities, outreach statuses or founder email drafts. The application validates, assigns identity, imports observations, evaluates and stores results separately.
+
+EXACT SHAPE GUIDE
+The following is an UNKNOWN-ONLY shape guide, NOT completed research. Replace the requested name and timestamp, fill verified findings/sources where available and preserve genuine unknowns. The angle-bracket timestamp must never remain in final output.
+{
+  "schema_version": "1.0",
+  "researched_at": "<actual ISO 8601 timestamp with timezone>",
+  "data_scope": "real_investor_research",
+  "organizations": [
+    {
+      "name": "<organization requested>",
+      "canonical_domain": null,
+      "aliases": [],
+      "organization_type": "unknown",
+      "scope_status": "unclear",
+      "scope_reason": "Insufficient verified evidence of U.S. angel/VC relevance.",
+      "funding_status": {
+        "status": "unknown",
+        "source_ids": [],
+        "note": "Current investing activity not verified."
+      },
+      "criteria": {
+        "stage": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "sector": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "geography": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "amount": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "traction": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        },
+        "restrictions": {
+          "findings": [],
+          "unknowns": [
+            "Not verified."
+          ],
+          "conflicts": []
+        }
+      },
+      "check_size": {
+        "currency": null,
+        "basis": "unknown",
+        "minimum_usd": null,
+        "maximum_usd": null,
+        "typical_usd": null,
+        "source_ids": [],
+        "note": "No check size verified."
+      },
+      "investor_role": {
+        "role": "unknown",
+        "source_ids": [],
+        "note": "Round role not verified."
+      },
+      "contacts": [],
+      "approach_routes": [],
+      "portfolio_conflicts": {
+        "review_status": "not_reviewed",
+        "items": [],
+        "note": "No portfolio review performed."
+      },
+      "sources": [],
+      "open_questions": [
+        "Verify organization identity, scope and criteria."
+      ],
+      "research_limitations": [
+        "No usable investor evidence verified."
+      ]
+    }
+  ]
+}
+
+FINDING SHAPE
+{"statement":"<specific supported fact or explained inference>","evidence_status":"verified or inferred","rule_type":"hard_requirement, preference, typical_profile, portfolio_example or inference","source_ids":["S1"]}
+
+SOURCE SHAPE
+{"source_id":"S1","title":"<page title>","url":"<full http/https URL>","publisher":"<publisher>","source_type":"official or independent_secondary","checked_on":"YYYY-MM-DD","published_on":null,"supports":["<fact supported>"],"redistribution_status":"unknown","rights_note":null}
+
+CONTACT SHAPE
+{"name":"<verified name>","position":"<verified position>","relevance":"<supported relationship to stage/sector or screening>","relevance_status":"verified or inferred","decision_authority":"not_verified","source_ids":["S1"],"route_ids":[]}
+
+ROUTE SHAPE
+{"route_id":"R1","route_type":"pitch_form, business_email, company_phone, contact_page or homepage","value":"<verified URL, email or company line>","label":"<route description>","source_ids":["S1"],"note":"<limitations or usage instructions>"}
+
+BEFORE RETURNING
+Confirm JSON syntax, exact keys and enums, one to five distinct requested organizations, unique source/route IDs per profile, all references resolvable, known numeric terms supported, lower/upper bounds consistent, fact/inference separation, no unsupported decision authority and no fabricated contact routes. Return incomplete research honestly, with unknowns and limitations.

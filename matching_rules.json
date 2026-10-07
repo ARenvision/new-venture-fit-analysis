@@ -1,0 +1,136 @@
+{
+  "data_scope": "synthetic_demo",
+  "methodology_version": "reviewed_rules_1.0",
+  "organizations": {
+    "demo-seed.example": {
+      "organization_domain": "demo-seed.example",
+      "profile_sha256": "d34c0603a4fc6dbfbd119d3a48cc591b3e8eefd76141e65d428eefb398ab9a0b",
+      "review_status": "reviewed",
+      "criteria": [
+        {
+          "factor": "stage",
+          "field": "funding_stage",
+          "operator": "one_of",
+          "value": [
+            "pre_seed"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "sector",
+          "field": "sector",
+          "operator": "one_of",
+          "value": [
+            "b2b_software"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "geography",
+          "field": "operating_country",
+          "operator": "one_of",
+          "value": [
+            "United States"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "restrictions",
+          "field": "equity_willing",
+          "operator": "equals",
+          "value": true,
+          "finding_index": 0
+        },
+        {
+          "factor": "restrictions",
+          "field": "relocation_willing",
+          "operator": "equals",
+          "value": false,
+          "finding_index": 1
+        },
+        {
+          "factor": "restrictions",
+          "field": "all_founders_full_time",
+          "operator": "equals",
+          "value": true,
+          "finding_index": 2
+        },
+        {
+          "factor": "traction",
+          "field": "paying_customers",
+          "operator": "at_least",
+          "value": 0,
+          "finding_index": 0
+        },
+        {
+          "factor": "stage",
+          "field": "progress",
+          "operator": "one_of",
+          "value": [
+            "Working prototype",
+            "Product in pilots",
+            "Paying customers"
+          ],
+          "finding_index": 1
+        }
+      ],
+      "check_size_reviewed": true
+    },
+    "demo-angels.example": {
+      "organization_domain": "demo-angels.example",
+      "profile_sha256": "22a97aee0ed07def01909d8f903da817aa6aa67d788b3b0b1069d2223a71c09b",
+      "review_status": "reviewed",
+      "criteria": [
+        {
+          "factor": "stage",
+          "field": "funding_stage",
+          "operator": "one_of",
+          "value": [
+            "pre_seed"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "sector",
+          "field": "sector",
+          "operator": "one_of",
+          "value": [
+            "b2b_software"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "geography",
+          "field": "operating_country",
+          "operator": "one_of",
+          "value": [
+            "United States"
+          ],
+          "finding_index": 0
+        },
+        {
+          "factor": "restrictions",
+          "field": "equity_willing",
+          "operator": "equals",
+          "value": true,
+          "finding_index": 0
+        },
+        {
+          "factor": "restrictions",
+          "field": "relocation_willing",
+          "operator": "equals",
+          "value": false,
+          "finding_index": 1
+        },
+        {
+          "factor": "traction",
+          "field": "paying_customers",
+          "operator": "at_least",
+          "value": 5,
+          "finding_index": 0
+        }
+      ],
+      "check_size_reviewed": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New Venture Fit Analysis — App Map</title>
+<style>body{background:#0e1728;color:#e4edf6;font:17px/1.65 system-ui;margin:0}main{max-width:900px;margin:auto;padding:36px 24px}h1,h2{line-height:1.25}h2{color:#83dec8}section{background:#18263b;border:1px solid #35465d;border-radius:14px;padding:22px;margin:22px 0}code{color:#b3e5ff}summary{cursor:pointer;font-weight:650}.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.step{border:1px solid #416174;padding:15px;border-radius:10px}.small{color:#aebed0;font-size:14px}</style>
+<main><h1>New Venture Fit Analysis</h1><p>A reference map: understand investor fit, then preserve the assessment.</p>
+<p class="small">Snapshot: October 6, 2026. Current app matches saved source version 8. Original interactive checkpoint: 3956aa4; current reconciliation follows it. This reference route does not claim a completed learner walkthrough.</p>
+<section><h2>One assessment through the app</h2><div class="flow">
+<div class="step"><b>1. Confirm answers</b><p><code>app.py → confirm</code><br>Checks confirmation and passes the structured profile to evaluation.</p></div>
+<div class="step"><b>2. Explain fit</b><p><code>evaluation.py → evaluate</code><br>Compares founder values with reviewed criteria and returns reasons and a label.</p></div>
+<div class="step"><b>3. Save and reopen</b><p><code>app.py → save_current_assessment / reopen_assessment</code><br>Saves a snapshot and restores it without recomputing.</p></div></div></section>
+<section><h2>Business cause and effect</h2><p>Demo Seed Partners requires all founders to be full-time. Changing that answer to No makes a synthetic hard requirement fail and produces Poor Fit. Unknown information remains unknown.</p>
+<details><summary>Inspect the decision</summary><p>Find <code>all_founders_full_time</code> in <code>matching_rules.json</code>. Then find <code>_matches</code> and <code>hard_mismatch</code> in <code>evaluation.py</code>. Known hard mismatches take precedence over missing essential evidence, remaining conditions, and Strong Fit.</p></details></section>
+<section><h2>Software cause and effect</h2><p>Evaluating changed answers saves a new assessment. Earlier answers, rules, evidence, and results remain in SQLite. Reopening restores the selected snapshot without rerunning the evaluator.</p>
+<details><summary>Inspect preserved history</summary><p>Find <code>summary_json</code> in <code>app.py → save_current_assessment</code> and <code>reopen_assessment</code>. In <code>schema.sql</code>, inspect <code>assessments</code> and <code>assessment_results</code>. The check is <code>test_workflow.py → test_changed_input_appends_and_original_reopens_without_recalculation</code>.</p></details></section>
+<section><h2>To change this, start here</h2><ul>
+<li>Form and confirmation: <code>app.py → form / confirm</code>.</li>
+<li>Fit reasoning: <code>evaluation.py → evaluate</code>. Review evidence before changing <code>matching_rules.json</code>.</li>
+<li>Email saving: <code>app.py → remember_email / assessment_drafts</code>.</li>
+<li>Response tracking: <code>app.py → record_outreach / show_outreach</code>. Separate events never change fit.</li>
+<li>Downloads: <code>app.py → funding_brief_pdf / shortlist_csv</code>.</li></ul></section>
+<section><h2>A practice to reuse</h2><p>Describe an observable effect before changing code: changing full-time commitment should affect the relevant criterion while the original saved assessment stays unchanged. Check both the new result and the preserved history. The PRD's Cause-and-Effect Demonstration and the changed-input integration test connect that intention to evidence.</p></section>
+<section><h2>Run and return</h2><p>In <code>C:\contest</code>, run <code>python -m pip install -r requirements.txt</code>, then <code>python -m streamlit run app.py</code>. Keep your current <code>demo.db</code>. Restore work through Saved assessments.</p><p>Open this <code>app-map.html</code> file in a browser to revisit the route. It works offline without scripts; the snapshot can drift as code changes.</p></section>
+</main></html>
